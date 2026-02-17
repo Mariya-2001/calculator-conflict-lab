@@ -1,9 +1,14 @@
 import java.util.Scanner;
-
 public class Calculator {
+    public static int factorial (int num) {
+        int result = 1;
+        for (int i = num; i>=1; i--){
+            result = result * i;
+        }
+        return result;
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
 
         // Multiplicaion and Division
         System.out.println("Enter first number");
@@ -17,7 +22,12 @@ public class Calculator {
         System.out.println("Product: " + product);
         System.out.println("Quotient: " + quotient);
 
+        //Factorial using the function
+        System.out.println("Enter number for factorial");
+        int num = scanner.nextInt();
 
+        int fact = factorial (num);
+        System.out.println("Factorial: " + fact);
         // Addition and Subtraction
         System.out.println("Enter first number:");
         int number1 = scanner.nextInt();
